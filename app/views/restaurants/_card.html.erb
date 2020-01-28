@@ -3,5 +3,10 @@
   <div class="card-product-infos">
     <h2><%= restaurant.name %></h2>
     <p><%= restaurant.description %></p>
+    <p>
+    <%= link_to 'Show', restaurant %> |
+    <%= link_to 'Edit', edit_restaurant_path(restaurant) %> |
+    <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
   </div>
 </div>
