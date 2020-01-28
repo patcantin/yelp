@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "restaurants#index"
+
   resources :restaurants do
     # method to create new routes using ressources
     collection do

@@ -30,6 +30,16 @@
   </tbody>
 </table>
 
+  <div class="container">
+    <div class="row">
+      <% @restaurants.each do |r| %>
+        <div class="col-xs-12 col-sm-3">
+          <%= render "card", restaurant: r %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 <br>
 
 <%= link_to 'New Restaurant', new_restaurant_path %>

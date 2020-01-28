@@ -1,5 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<!-- inject metadatas -->
+<% content_for(:title) do %>
+  <%= @restaurant.name %> is on Yelp
+<% end %>
+<% content_for(:description) do %>
+  <%= @restaurant.name %> is on Yelp
+<% end %>
+<% content_for(:og_image) do %>
+  <%= @restaurant.name %> is on Yelp
+<% end %>
+
 <p>
   <strong>Name:</strong>
   <%= @restaurant.name %>
@@ -27,6 +38,10 @@
     <% end %>
   </ul>
 
+
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %> |
 <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+
+
